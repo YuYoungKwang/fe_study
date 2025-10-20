@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!--
+            a 태그 : 어떤 링크로 이동하는 태그
+            href 속성 : 이동할 경로
+
+            target 속성
+                _blank : 새창
+                _self : 현재창
+        -->
+        
+        <a href="https://www.naver.com" target="_blank" title="네이버링크">네이버이동</a>
+        <br>
+        <a href="https://www.google.com" target="_blank" title="구글링크">구글로 이동</a>
+        <br>
+        <a href="./tag03.html" target="_self" title="태그 03 파일링크">태그 03파일</a>
+
+        <br>
+        <br>
+
+        <!-- 화면에 이미지 표시 img 태그-->
+
+        <!--외부 img경로-->
+        <img src="https://thumbnail.coupangcdn.com/thumbnails/remote/292x292ex/image/vendor_inventory/image_audit/prod/b5ef6012-d1a4-4d3c-84d6-274086acf97e_fixing_v2.png" alt="쥐포사진">
+        <br>
+        <img src="./skyscrapers.jpg" alt="사진1">   <!--현재 파일과 동일한 경로-->
+        <br>
+        <img src="./img/karlsbad.webp" alt="사진2"> <!--하위 폴더 경로-->
+        <br>
+        <img src="../../images/ruhr-area.png" alt="사진3"> <!--상위 다른 폴더 경로-->
+
+        <br>
+        <br>
+
+        <a href="https://www.coupang.com/vp/products/9039517215?vendorItemId=93135897058&sourceType=HOME_GW_PROMOTION&searchId=feed-53bb0e238bc248a29cce50edf52f258d-3.33.107:gw_promotion" target="_blank">
+            <img src="https://thumbnail.coupangcdn.com/thumbnails/remote/292x292ex/image/vendor_inventory/image_audit/prod/b5ef6012-d1a4-4d3c-84d6-274086acf97e_fixing_v2.png" alt="쥐포사진">
+        </a>
+    </body>
+</html>
