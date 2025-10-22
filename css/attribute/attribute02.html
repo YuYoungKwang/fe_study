@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+
+
+    <style>
+        .font-attr1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+            font-variant: small-caps;
+            letter-spacing: 10px;
+            line-height: 5rem;
+        }
+
+        .font-attr2 {
+            /* 700 bold */
+            font-weight: 700;
+            font-style: italic;
+            /* italic   */
+            /* oblique  */
+        }
+
+        .font-box {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .inbox1 {
+            font-size: 2em;
+            /* em 상대크기 부모요소 크기 대비 */
+        }
+
+        .inbox2 {
+            font-size: 2rem;
+            /* rem 상대크기 */
+            /* html 크기 대비 */
+            /* html 기본 텍스트 크기 16px */
+        }
+
+        .nanum-brush-script-regular {
+            font-family: "Nanum Brush Script", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .gugi-regular {
+            font-family: "Gugi", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+    </style>
+</head>
+
+<body>
+    <p>기본 텍스트</p>
+    <p class="font-attr1">Font attr1</p>
+
+    <p class="font-attr2 gugi-regular">Font attr2 글씨 속성</p>
+
+    <p>
+        오늘의 특가
+        <del>5,000원</del><ins>3,000원</ins>
+    </p>
+    <p>
+        오늘의 특가
+        <span style="text-decoration: line-through;">5,000원</span>
+        <span style="text-decoration: underline;">3,000원</span>
+    </p>
+
+    <div class="font-box">
+        <p class="nanum-brush-script-regular">font box 글자 1</p>
+        <p class="inbox1">font box 글자 2222</p>
+        <p class="inbox2">font box 글자 33333333</p>
+    </div>
+
+    <div class="font-box2">
+        <p class="gugi-regular">font box 글자 1</p>
+        <p class="inbox1">font box 글자 2222</p>
+        <p class="inbox2">font box 글자 33333333</p>
+    </div>
+
+</body>
+
+</html>
