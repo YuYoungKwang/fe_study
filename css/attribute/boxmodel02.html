@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 전체선택자 모든 요소에 기본 세팅 적용 */
+        * {
+            margin: 0; /* 외부여백 0 */
+            padding: 0; /* 내부여백 0 */
+            box-sizing: border-box ;  /*  박스모델에 사이즈를 지정하면 border까지 사이즈 */
+        }
+
+        /*
+            display 속성
+                none            : 표시 X
+                block           : 한줄 다 차지, 사이즈(width, height) 적용 가능, 여백 적용
+                inline          : 컨텐츠 사이즈 만큼 차지, 같은줄 옆에 나란히 배치, 사이즈 적용x, 여백 적용(좌/우)
+                inline-block    : 자체적으로는 block 처럼 (사이즈, 여백...)
+                                외부적으로는 inline 처럼 (다른 요소와 상호작용 할때, 나란히 배치)
+        */
+
+        .box1 {
+            /* div 태크 기본 block */
+            width: 200px;
+            height:  100px;
+            border: 1px solid black;
+
+            margin: 10px;
+            padding: 10px;
+
+            display: none;
+        }
+
+        .box2 {
+            /* div 태크 기본 block */
+            width: 200px;
+            height:  100px;
+            border: 1px solid black;
+
+            margin: 10px;
+            padding: 10px;
+
+            display: block;
+        }
+
+        .box2:hover {
+            display: inline-block;
+            width: 180px;
+            height: 80px;
+        }
+
+        .box3 {
+            /* div 태크 기본 block */
+            width: 200px;
+            height:  100px;
+            border: 1px solid black;
+
+            margin: 10px;
+            padding: 10px;
+
+            /* display: inline; */
+            display: inline-block;
+        }
+
+        .span1 {
+            display: inline;
+
+            width: 200px;
+            height: 100px;
+        }
+
+        .parent {
+            width: 200px;
+            height: 100px;
+            border: 1px solid blue; 
+        }
+
+        .child {
+            width: 100px;
+            height: 50px;
+            border: 1px solid red;
+
+            display: none;
+        }
+
+        .parent:hover .child{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="box1">
+        box1
+    </div>
+
+    <div class="box2">
+        box2
+    </div>
+
+    <div class="box3">
+        box3
+    </div>
+    
+    <span class="span1">span1</span>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel dolores accusamus qui error, molestiae omnis, fugit, iusto ducimus in tenetur similique quis. Sequi distinctio debitis officia asperiores, animi laudantium consectetur.</span>
+
+    <div class="parent">
+        부모
+        <div class="child">
+            자식
+        </div>
+    </div>
+
+</body>
+</html>
