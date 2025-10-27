@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .background-box {
+            margin: 50px;
+            width: 283px;
+            height: 510px;
+            border: 1px solid black;
+        }
+
+        .container {
+            width: 263px;
+            height: 480px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        .header {
+            height: 65px;
+        }
+
+        .main-select {
+            width: 100%;
+            height: 30px;
+            border-width: 0px 0px 2px 0px;
+            border-style: solid;
+            border-color: rgb(235, 235, 237);
+        }
+
+        .login {
+            float: left;
+            width: 48px;
+            height: 30px;
+            color: rgb(199, 199, 199);
+            border-width: 0px 0px 0px 0px;
+            border-style: solid;
+            border-color: black;
+            margin-right: 12px;
+        }
+
+        .sighUp {
+            float: left;
+            width: 60px;
+            height: 30px;
+            color: rgb(63, 135, 242);
+            border-width: 0px 0px 3px 0px;
+            border-style: solid;
+            border-color: rgb(63, 135, 242);
+        }
+
+        .main-sighup {
+            margin-top: 30px;
+        }
+
+        .text-sighup {
+            font-size: 14px;
+            margin-top: 10px;
+            margin-bottom: 2px;
+        }
+
+        .text-field {
+            width: 100%;
+            height: 30px;
+            color: rgb(68, 68, 68);
+            border: 1.5px solid rgb(160, 160, 160);
+        }
+
+        .agree {
+            height: 30px; 
+            font-size: 10px;
+        }
+
+        .agree-checkbox {
+            float: left;
+            line-height: 40px;
+        }
+
+        .agree-text {
+            float: left;
+            line-height: 32px;
+        }
+
+        .submit-button {
+            width: 100%;
+            height: 40px;
+            border: 0px;
+            background-color: rgb(63, 135, 242);
+            color: rgb(226, 240, 247);
+        }
+
+        .easy-sighup {
+            margin: 7px;
+            text-align: center;
+            font-size: small;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-box">
+        <div class="container">
+            <div class="header">
+                <p>지금 가입하시면</p>
+                <p><b>웰컴쿠폰을 드려요!</b></p>
+
+            </div>
+            <div class="main-select">
+                <label class="login">로그인</label>
+                <label class="sighUp">회원가입</label>
+            </div>
+            <form class="form-login">
+
+            </form>
+            <form class="form-sighup">
+                <div class="main-sighup">
+                    <P class="text-sighup">이메일</P>
+                    <input class="text-field" type="email" placeholder=" 이메일을 입력해주세요">
+                    <p class="text-sighup">이름 / 업체명</p>
+                    <input class="text-field" type="text" placeholder=" 2자 이상 20자 이하">
+                    <p class="text-sighup">비밀번호</p>
+                    <input class="text-field" type="password" placeholder=" 영문 숫자 특수문자 조합 6-16자리">
+                    <p class="text-sighup">비밀번호 확인</p>
+                    <input class="text-field" type="password" placeholder=" 비밀번호를 다시 입력해주세요.">
+                    <div class="agree">
+                        <div class="agree-checkbox">
+                            <input type="checkbox" id="Idagree">
+                        </div>
+                        <div class="agree-text">
+                            <label for="Idagree">
+                                <ins>개인정보수집이용안내</ins> 및 <ins>약관</ins>에 동의합니다.
+                            </label>
+                        </div>
+                    </div>
+                    <button class="submit-button" type="submit">회원가입하기</button>
+                </div>
+
+                <div class="easy-sighup">
+                    <a href="www.daum.com">SNS로 간편하게 가입하기</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
