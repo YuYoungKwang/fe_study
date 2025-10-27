@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        .box1 {
+            width:100px;
+            height:100px;
+            margin: 10px;
+            animation-name: box-ani1;
+            animation-duration: 2s;
+            animation-delay: 1s;
+
+            animation-fill-mode: both;
+            animation-iteration-count: infinite; 
+            animation-direction: alternate ;
+            position: relative;
+            animation-play-state: running;
+        }
+
+        .box1:hover {
+            animation-play-state:paused;
+        }
+
+        .box2 {
+            width:100px;
+            height:100px;
+            margin: 10px;
+            animation-name: box-ani2;
+            animation-duration: 2s;
+            animation-delay: 1s;
+
+            animation-fill-mode: both;
+            animation-iteration-count: infinite; 
+            animation-direction: alternate ;
+            position: relative;
+            animation-play-state: running;
+        }
+
+        .box2:hover {
+            animation-play-state:paused;
+        }
+
+        .box3 {
+            width:100px;
+            height:100px;
+            margin: 10px;
+            animation-name: box-ani3;
+            animation-duration: 2s;
+            animation-delay: 1s;
+
+            animation-fill-mode: both;
+            animation-iteration-count: infinite; 
+            animation-direction: alternate ;
+            position: relative;
+            animation-play-state: running;
+        }
+
+        .box3:hover {
+            animation-play-state:paused;
+        }
+
+        .box:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes box-ani1 {
+            0% {
+                background-color: blue;
+                left: 0px;
+                opacity: 1;
+            }
+            50% {
+                background-color: orange;
+                left: 100px;
+                opacity: 1;
+            }
+            100% {
+                background-color: pink;
+                left: 200px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes box-ani2 {
+            0% {
+                background-color: blue;
+                top: 0px;
+                opacity: 1;
+            }
+            50% {
+                background-color: orange;
+                top: 100px;
+                opacity: 1;
+            }
+            100% {
+                background-color: pink;
+                top: 200px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes box-ani3 {
+            0% {
+                background-color: blue;
+                left: 0px;
+                top : 0px;
+                opacity: 1;
+            }
+            50% {
+                background-color: orange;
+                left: 100px;
+                top : 100px;
+                opacity: 1;
+            }
+            100% {
+                background-color: pink;
+                left: 200px;
+                top : 200px;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>
