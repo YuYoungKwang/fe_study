@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            border: 2px solid black;
+            height: 160px;
+        }
+
+        .container {
+            border: 2px solid black;
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        .top{
+            display: flex;
+            width: 100%;
+            
+        }
+
+        .top-left{
+            width: 50%;
+            background-color: red;
+        }
+
+        .top-right{
+            width: 50%;
+            background-color: orange;
+        }
+
+        .top2{
+            background-color: yellow;
+        }
+        
+        .middle {
+            display: flex;
+            
+        }
+
+        .middle-left{
+            width: 50%;
+            border: 2px solid black;
+            background-color: green;
+        }
+
+        .middle-right{
+            width: 50%;
+        }
+
+        .middle-right1{
+            background-color: blue;
+        }
+
+        .middle-right2{
+            background-color: rgb(26, 1, 94);
+        }
+
+        .bottom{
+            display: flex;
+        }
+
+        .bottom-box{
+            width: 25%;
+            height: 160px;
+            border: 2px solid black;
+        }
+
+        .bottom1 {
+            background-color: purple;
+        }
+
+        .bottom2 {
+            background-color: rgb(173, 0, 107);
+        }
+
+        .bottom3 {
+            background-color: rgb(128, 0, 70);
+        }
+
+        .bottom4 {
+            background-color: rgb(128, 0, 32);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="box top-left"></div>
+            <div class="box top-right"></div>
+        </div>
+        <div class="box top2"></div>
+        <div class="middle">
+            <div class="middle-left"></div>
+            <div class="middle-right">
+                <div class="box middle-right1"></div>
+                <div class="box middle-right2"></div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bottom-box bottom1"></div>
+            <div class="bottom-box bottom2"></div>
+            <div class="bottom-box bottom3"></div>
+            <div class="bottom-box bottom4"></div>
+        </div>
+    </div>
+</body> 
+
+</html>
