@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>달식당좋아요 <span id="like">♡</span> <span id="number">0</span></p>
+    <script>
+        const like = document.getElementById('like');
+        const number = document.getElementById('number');
+        let count = 1;
+        like.addEventListener('click',()=>{
+            number.textContent = count++;
+            like.textContent = '❤︎';
+        })
+    </script>
+</body>
+</html>
