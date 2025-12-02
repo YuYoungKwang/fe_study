@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form id="form_id">
+        <input type="text" id="loginId" placeholder="아이디"><br>
+        <input type="password" id="loginPw" placeholder="비밀번호"><br>
+        <!-- <button id="btnLogin" onclick="tryLogin()">로그인 시도</button><br> -->
+        <button id="btnLogin" type="submit">로그인 시도</button><br>
+    </form>
+
+    <script>
+
+        const input_id = document.getElementById('loginId');
+        const input_pw = document.getElementById('loginPw');
+
+        
+        /* *로그인 버튼을 누르면.
+        > 아이디와 비밀번호에 있는 입력된 텍스트를 없애기 */
+        function tryLogin(){
+            console.log('tryLogin()');
+            input_id.value = '';
+            input_pw.value = '';
+        }
+
+        /*
+        *아이디 입력칸에서 키보드 입력 시,
+        무슨 키가 눌렸는지 확인 해보고 엔터가 눌리면 비밀번호 입력 칸으로 이동*/
+        input_id.addEventListener('keydown', (event)=>{
+            //console.log(event);
+            
+            if(event.key == 'Enter'){
+                event.preventDefault();
+                input_pw.focus();
+            }
+        })
+
+        /*
+        *비밀번호 입력칸에서 키보드 입력 시,
+        엔터가 눌리면 로그인 버튼을 누른것과 동일한 기능을 수행*/
+        input_pw.addEventListener('keydown', (event)=>{
+            //console.log(event);
+            
+            if(event.key == 'Enter'){  //비밀번호 입력칸에서 엔터 입력
+                //로그인 버튼 눌렀을때랑 동일한거
+                //1) 동일한 코드 수행
+                //input_id.value = '';
+                //input_pw.value = '';
+
+                //2) 버튼에 실제로 이벤트 발생
+                //document.getElementById('btnLogin').click();  //로그인 버튼 누르는 이벤트를 발생
+
+                //3) 수행하는 함수! 동일한 함수 그대로 호출
+                event.preventDefault();
+                tryLogin();
+            }
+        })
+
+        const form_id = document.getElementById('form_id');
+
+        form_id.addEventListener('submit', (event)=>{
+            event.preventDefault();
+
+
+            loginId.value = loginId.value.trim();
+            loginPw.value = loginPw.value.trim();
+
+            if(loginId.value == ''){
+                alert('아이디 입력해주세요');
+                loginId.focus();
+                return;
+            }
+
+            if(loginPw.value == ''){
+                alert('비밀번호 입력해주세요');
+                loginPw.focus();
+                return;
+            }
+
+            //검증 모두 통과 ~~ submit 발생 
+            //form_id.submit();
+            //submit 실행되면? -> tryLogin() 아이디비번 초기화(공백)
+            
+            tryLogin();
+            alert('submit 수행 완료');
+        })
+
+    </script>
+</body>
+
+</html>
