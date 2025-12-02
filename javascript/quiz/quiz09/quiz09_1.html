@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 필요시 작성 */
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="main">
+            <p id="p1">p1 텍스트</p>
+            <p id="p2">p2 텍스트</p>
+        </div>
+    </div>
+    <button onclick="changeMain()">main 배경색 gray로 변경</button>
+    <button onclick="restoreMain()">main 배경색 white로 복구</button>
+    <button onclick="changeP1()">p1 글자색 red로 변경</button>
+    <button onclick="restoreP1()">p1 글자색 black으로 복구</button>
+    <button onclick="changeP2()">"p2 텍스트"를 "p2 글자" 로 변경</button>
+
+
+    <script>
+        /* 코드 작성 부분 */
+        function changeMain(){
+            document.getElementById('main').style.backgroundColor = 'gray';
+        }
+
+        function restoreMain(){
+            document.getElementById('main').style.backgroundColor = 'white';
+            //document.getElementById('main').style.removeProperty('background-color');
+        }
+
+        const changeP1 = function(){
+            document.getElementById('p1').classList.add('red');
+        }
+
+        const restoreP1 = function(){
+            document.getElementById('p1').classList.remove('red');
+        }
+
+        const changeP2 = ()=>{
+            document.getElementById('p2').textContent = 'p2 글자';
+        }
+
+    </script>
+</body>
+
+</html>

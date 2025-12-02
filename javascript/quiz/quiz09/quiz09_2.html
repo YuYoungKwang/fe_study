@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 필요시 작성 */
+        .red {
+            color: red;
+        }
+
+        .bg-gray {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="main">
+            <p id="p1">p1 텍스트</p>
+            <p id="p2">p2 텍스트</p>
+        </div>
+    </div>
+    <button onclick="changeMain()">main 배경색 gray로 변경</button>
+    <button onclick="changeP1()">p1 글자색 red로 변경</button>
+    <button onclick="changeP2()">"p2 텍스트"를 "p2 글자" 로 변경</button>
+
+
+    <script>
+        /* 코드 작성 부분 */
+        let bgFlag = false;
+        function changeMain(){
+
+            //if(document.getElementById('main').style.backgroundColor == 'gray')
+            //document.getElementById('main').classList.toggle('bg-gray');
+
+            if(bgFlag == false){
+                document.getElementById('main').style.backgroundColor = 'gray';
+                bgFlag = true;
+            } else {
+                document.getElementById('main').style.backgroundColor = 'white';
+                bgFlag = false;
+            }
+        }
+
+        const changeP1 = function(){
+            //document.getElementById('p1').classList.add('red');
+            document.getElementById('p1').classList.toggle('red');
+        }
+
+        //텍스트 변경
+
+/*         let p2Flag = 0; */
+
+        let textArr = ['p2 텍스트', 'p2 하나', 'p2 둘' , 'p2 셋', 'p2 넷'];
+        let index = 1;
+        const changeP2 = ()=>{
+            //p2 텍스트 , p2 하나 , p2 둘 , p2 셋, p2 넷
+
+            document.getElementById('p2').textContent = textArr[index];
+            index++;
+            index = index % textArr.length;
+
+            // 0%5 = 0   1%5 = 1   2%5 = 2   3%5 = 3  4%5 = 4   5%5 = 0
+
+            /* if(p2Flag == 0){
+                document.getElementById('p2').textContent = 'p2 하나';
+            } else if(p2Flag == 1){
+                document.getElementById('p2').textContent = 'p2 둘';
+            } else if(p2Flag == 2){
+                document.getElementById('p2').textContent = 'p2 셋'; 
+            } else if(p2Flag == 3){
+                document.getElementById('p2').textContent = 'p2 넷'; 
+            } else {
+                document.getElementById('p2').textContent = 'p2 텍스트';
+            }
+
+            p2Flag++;
+            if(p2Flag > 4){
+                p2Flag = 0;
+            } */
+
+
+            /* if(document.getElementById('p2').textContent == 'p2 텍스트'){
+                document.getElementById('p2').textContent = 'p2 하나';
+            } else if(document.getElementById('p2').textContent == 'p2 하나'){
+                document.getElementById('p2').textContent = 'p2 둘';
+            } else if(document.getElementById('p2').textContent == 'p2 둘'){
+                document.getElementById('p2').textContent = 'p2 셋'; 
+            } else if(document.getElementById('p2').textContent == 'p2 셋'){
+                document.getElementById('p2').textContent = 'p2 넷'; 
+            } else {
+                document.getElementById('p2').textContent = 'p2 텍스트';
+            } */
+
+
+        }
+
+    </script>
+</body>
+
+</html>
